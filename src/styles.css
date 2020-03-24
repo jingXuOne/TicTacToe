@@ -1,0 +1,77 @@
+div {
+  display: block;
+}
+h1 {
+  text-align: center;
+}
+.game {
+  width: 462px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+}
+
+#info {
+  clear: both;
+  width: 100%;
+  height: 30px;
+}
+
+.X:before {
+  content: "X";
+}
+
+.O:before {
+  content: "O";
+}
+#startButton {
+  float: left;
+  margin: 5px;
+  width: 40%;
+  height: 30px;
+}
+#clearButton {
+  float: right;
+  margin: 5px;
+  width: 40%;
+  height: 30px;
+  visibility: hidden;
+}
+.square {
+  border-width: 2px;
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  color: red;
+  font-size: 100px;
+  text-align: center;
+}
+.square.winner {
+  background-color: yellow;
+}
+.square.left {
+  clear: both;
+  border-right-style: solid;
+}
+
+.square.right {
+  border-left-style: solid;
+}
+
+.square.top {
+  border-bottom-style: solid;
+}
+
+.square.bottom {
+  border-top-style: solid;
+}
