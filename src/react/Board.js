@@ -3,7 +3,6 @@ import Square from "./Square";
 
 export default class Board extends Component {
   render() {
-    console.log("Board", this.props);
     return (
       <div className="board">
         {this.props.squares.map((value, index) => {

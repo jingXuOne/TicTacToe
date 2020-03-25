@@ -3,16 +3,6 @@ import Board from "./Board";
 import GameInfo from "./GameInfo";
 import Button from "./Button";
 
-const winResults = [
-  [0, 1, 2],
-  [0, 3, 6],
-  [0, 4, 8],
-  [1, 4, 7],
-  [2, 4, 6],
-  [2, 5, 8],
-  [3, 4, 5],
-  [6, 7, 8]
-];
 export default class Game extends Component {
   constructor(props) {
     super(props);
@@ -82,7 +72,16 @@ export default class Game extends Component {
       }
     });
   }
-
+  const initialState = {
+    isPlayerX: true,
+    squares: Array(9).fill(""),
+    info: "Player1: X Player2: O",
+    isOver: false,
+    result: {
+      winner: "",
+      line: []
+    }
+  };
   checkWinner() {
     const playerSymbol = this.state.isPlayerX ? "X" : "O";
     //find all index with symbol "x" or "o";
