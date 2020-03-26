@@ -4,7 +4,8 @@ import Board from "./../components/Board";
 function mapStateToProps(state) {
   return {
     squares: state.squares,
-    winLine: state.result.lines
+    winLine: state.result.line
   };
 }
-connect(mapStateToProps)(Board);
+
+export default connect(mapStateToProps)(Board);

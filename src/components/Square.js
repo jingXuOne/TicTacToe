@@ -22,7 +22,11 @@ function Square(props) {
   return (
     <div
       id={props.squareId}
-      onClick={props.onClick}
+      onClick={() => {
+        if (!props.player && !props.isOver) {
+          props.handleSquareClick(props.squareId);
+        }
+      }}
       className={classnames.join(" ")}
     />
   );

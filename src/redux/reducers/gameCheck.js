@@ -25,8 +25,4 @@ const checkWinner = (player, squares = []) => {
   return { isWin: false };
 };
 
-const checkAvailable = (position, squares) => {
-  return squares && squares[position] !== "";
-};
-
-export { checkWinner, checkAvailable };
+export { checkWinner };
